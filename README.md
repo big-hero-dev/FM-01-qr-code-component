@@ -1,4 +1,4 @@
-eee# 🌐 Frontend Mentor Solutions
+🌐 Frontend Mentor Solutions
 
 Welcome to my repository for solving challenges from [Frontend Mentor](w)!
 
@@ -19,4 +19,3 @@ You can browse the solutions by visiting the homepage at [bigherodev.cloud](http
 ## 📬 Contact
 If you have any questions or suggestions, feel free to contact me at [khanhtran28.work@gmail.com](mailto:khanhtran28.work@gmail.com).
 
----
