@@ -1,54 +1,22 @@
-# Frontend Mentor - QR Code Component Solution
+eee# 🌐 Frontend Mentor Solutions
 
-This is my solution for the **QR Code Component** challenge on [Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). The challenge is to build a simple QR code component that closely matches the provided design.
+Welcome to my repository for solving challenges from [Frontend Mentor](w)!
 
-![QR Code Component](./images/screenshot.png)
+## 📌 Introduction
+This repository contains my solutions to various Frontend Mentor challenges. Each folder in this repo represents a specific solution, deployed directly on GitHub Pages.
 
-## 🚀 Overview
+## 🚀 How to Access
+You can browse the solutions by visiting the homepage at [bigherodev.cloud](https://bigherodev.cloud) or by clicking on individual solutions from the list below.
 
-### ✨ Features:
-- Fully responsive design
-- Clean and minimal UI
-- Mobile-first approach
-- Accessible and semantic HTML
+## 📂 Solution List
+- [QR Code Component](./qr-code-component/)
+## 🛠 Technologies Used
+- [HTML](w)
+- [CSS](w)
+- [JavaScript](w)
+- [GitHub Pages](w)
 
-## 🔧 Technologies Used
-
-- HTML5
-- CSS3 (Flexbox)
-
-## 📂 Project Structure
-
-```
-├── index.html
-├── images/
-│   ├── qr-code.png
-│   ├── favicon-32x32.png
-│   ├── image-qr-code.png
-├── README.md
-```
-
-## 🌎 Live Preview
-You can view the live solution here: [Live Demo]()
-
-## 📸 Screenshot
-![QR Code Component Screenshot](./screenshot.png)
-
-## 🛠️ Installation & Usage
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/big-hero-dev/FM-01-qr-code-component.git
-   ```
-2. Open `index.html` in your browser.
-
-## 🎯 What I Learned
-- Structuring a simple component-based layout.
-- Using Flexbox for alignment.
-- Improving CSS styling techniques.
-
-## 📜 License
-This project is licensed under the MIT License.
+## 📬 Contact
+If you have any questions or suggestions, feel free to contact me at [khanhtran28.work@gmail.com](mailto:khanhtran28.work@gmail.com).
 
 ---
-Challenge by [Frontend Mentor](https://www.frontendmentor.io/), coded by **Khanh Tran**.
-

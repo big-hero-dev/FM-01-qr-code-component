@@ -5,102 +5,160 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Khanh Tran">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-	<title>Frontend Mentor | QR code component</title>
+	<meta name="color-scheme" content="only light">
+	<title>Frontend Mentor Solutions | Khanh Tran</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.frontendmentor.io/static/images/logo-desktop.svg">
 	<style>
+		:root {
+			--primary: #6b8e23;
+			--primary-hover: #5a7a1e;
+			--background: #f8fafc;
+			--card-bg: #ffffff;
+		}
+
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 		}
 
-		:root {
-			--bg-color: hsl(0, 0%, 100%);
-			--slate-300: hsl(212, 45%, 89%);
-			--slate-500: hsl(216, 15%, 48%);
-			--slate-900: hsl(218, 44%, 22%);
-			--font-size-text: 15px;
-			--font-size-heading: 22px;
-			--font-family: "Outfit";
-			--font-normal: 400;
-			--font-bold: 700;
-			--spacing-200: 16px;
-			--spacing-300: 24px;
-			--spacing-500: 40px;
-		}
-
 		body {
-			font-family: var(--font-family);
+			font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+			line-height: 1.5;
+			background-color: var(--background);
+			color: #334155;
 		}
 
 		.container {
+			max-width: 1200px;
 			margin: 0 auto;
-			height: 100vh;
-			background-color: var(--slate-300);
+			padding: 2rem 1rem;
+		}
+
+		header {
+			text-align: center;
+			margin-bottom: 3rem;
+			padding: 4rem 1rem;
+			background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+			color: white;
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 0.5rem;
+			font-weight: 700;
+		}
+
+		.subtitle {
+			font-size: 1.125rem;
+			color: #e2e8f0;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.projects-grid {
 			display: grid;
-			place-items: center;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1.5rem;
+			margin: 2rem 0;
 		}
 
-		.qr-wrapper {
-			max-width: 320px;
-			padding: var(--spacing-200);
-			padding-bottom: var(--spacing-300);
-			background-color: var(--bg-color);
-			border-radius: 20px;
-			box-shadow: 0 25px 25px rgba(0, 0, 0, 0.047);
+		.project-card {
+			background: var(--card-bg);
+			border-radius: 12px;
+			padding: 1.5rem;
+			transition: transform 0.2s ease;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+			border: 1px solid #e2e8f0;
 		}
 
-		.qr-image {
-			border-radius: 10px;
-			overflow: hidden;
+		.project-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 		}
 
-		.qr-image img {
-			width: 100%;
-			height: auto;
-			display: block;
-			object-fit: cover;
+		.project-card a {
+			color: var(--primary);
+			text-decoration: none;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 
-		.qr-text {
-			padding: var(--spacing-200);
+		.project-card a::after {
+			content: "→";
+			margin-left: 0.5rem;
+			opacity: 0;
+			transition: opacity 0.2s ease;
 		}
 
-		.qr-text h1 {
-			font-size: var(--font-size-heading);
-			color: var(--slate-900);
+		.project-card:hover a::after {
+			opacity: 1;
+		}
+
+		footer {
 			text-align: center;
-			margin-bottom: var(--spacing-200);
-			letter-spacing: 0;
-			line-height: 120%;
+			margin-top: 4rem;
+			padding: 2rem 1rem;
+			border-top: 1px solid #e2e8f0;
+			color: #64748b;
 		}
 
-		.qr-text p {
-			font-size: var(--font-size-text);
-			color: var(--slate-500);
-			text-align: center;
-			letter-spacing: 0.2px;
-			line-height: 140%;
+		footer a {
+			color: var(--primary);
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+		@media (max-width: 768px) {
+			.container {
+				padding: 1rem;
+			}
+
+			header {
+				padding: 3rem 1rem;
+			}
+
+			h1 {
+				font-size: 2rem;
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<div class="container">
-		<div class="qr-wrapper">
-			<div class="qr-image">
-				<img src="images/image-qr-code.png" alt="qr-code">
-			</div>
-			<div class="qr-text">
-				<h1>Improve your front-end skills by building projects</h1>
-				<p>Scan the QR code ito visit Frontend Mentor and take your coding skills to the next level</p>
-			</div>
+	<header>
+		<div class="container">
+			<h1>Frontend Mentor Solutions</h1>
+			<p class="subtitle">A collection of modern web development solutions by Khanh Tran</p>
 		</div>
-	</div>
+	</header>
 
+	<main class="container">
+		<div class="projects-grid">
+			<article class="project-card">
+				<h2>QR Code Component</h2>
+				<a href="./qr-code-component/" aria-label="View QR Code Component Solution">
+					View Solution
+				</a>
+			</article>
+			<!-- Add more project cards here -->
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>Powered by <a href="https://github.com/big-hero-dev" target="_blank" rel="noopener">Khanh Tran</a></p>
+			<p>Solutions from <a href="https://www.frontendmentor.io/" target="_blank" rel="noopener">Frontend Mentor</a>
+				challenges</p>
+		</div>
+	</footer>
 </body>
 
 </html>
