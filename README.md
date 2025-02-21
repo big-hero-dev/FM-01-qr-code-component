@@ -10,6 +10,7 @@ You can browse the solutions by visiting the homepage at [big-hero-dev.github.io
 
 ## 📂 Solution List
 - [QR Code Component](./qr-code-component/)
+- [Blog Preview Card](./blog-preview-card/)
 ## 🛠 Technologies Used
 - HTML
 - CSS

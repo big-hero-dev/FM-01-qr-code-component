@@ -3,18 +3,14 @@
 	--slate-300: hsl(212, 45%, 89%);
 	--slate-500: hsl(216, 15%, 48%);
 	--slate-900: hsl(218, 44%, 22%);
-	--font-size-text: 1.5rem;
-	--font-size-heading: 2.2rem;
+	--font-size-text: calc((15 / 16) * 1rem);
+	--font-size-heading: calc((22 / 16) * 1rem);
 	--font-family: "Outfit";
 	--font-normal: 400;
 	--font-bold: 700;
-	--spacing-200: 16px;
-	--spacing-300: 24px;
-	--spacing-500: 40px;
-}
-
-html {
-	font-size: 62.5%;
+	--spacing-200: 1rem;
+	--spacing-300: calc((24 / 16) * 1rem);
+	--spacing-500: calc((40/ 16) * 1rem);
 }
 
 body {
@@ -30,7 +26,7 @@ body {
 }
 
 .qr-wrapper {
-	max-width: 320px;
+	max-width: calc((320 / 16) * 1rem);
 	padding: var(--spacing-200);
 	padding-bottom: var(--spacing-300);
 	background-color: var(--bg-color);
