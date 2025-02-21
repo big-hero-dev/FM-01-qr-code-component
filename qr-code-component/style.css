@@ -1,0 +1,66 @@
+:root {
+	--bg-color: hsl(0, 0%, 100%);
+	--slate-300: hsl(212, 45%, 89%);
+	--slate-500: hsl(216, 15%, 48%);
+	--slate-900: hsl(218, 44%, 22%);
+	--font-size-text: 1.5rem;
+	--font-size-heading: 2.2rem;
+	--font-family: "Outfit";
+	--font-normal: 400;
+	--font-bold: 700;
+	--spacing-200: 16px;
+	--spacing-300: 24px;
+	--spacing-500: 40px;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-family);
+}
+
+.container {
+	margin: 0 auto;
+	min-height: 100vh;
+	background-color: var(--slate-300);
+	display: grid;
+	place-items: center;
+}
+
+.qr-wrapper {
+	max-width: 320px;
+	padding: var(--spacing-200);
+	padding-bottom: var(--spacing-300);
+	background-color: var(--bg-color);
+	border-radius: 20px;
+	box-shadow: 0 25px 25px rgba(0, 0, 0, 0.047);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	border-radius: 1rem;
+}
+
+.qr-text {
+	padding: var(--spacing-200);
+}
+
+.qr-text h2 {
+	font-size: var(--font-size-heading);
+	color: var(--slate-900);
+	text-align: center;
+	margin-bottom: var(--spacing-200);
+	letter-spacing: 0;
+	line-height: 1.2;
+}
+
+.qr-text p {
+	font-size: var(--font-size-text);
+	color: var(--slate-500);
+	text-align: center;
+	letter-spacing: 0.02em;
+	line-height: 1.4;
+}
