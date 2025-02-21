@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Khanh Tran">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+	<title>Frontend Mentor | QR code component</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--bg-color: hsl(0, 0%, 100%);
+			--slate-300: hsl(212, 45%, 89%);
+			--slate-500: hsl(216, 15%, 48%);
+			--slate-900: hsl(218, 44%, 22%);
+			--font-size-text: 15px;
+			--font-size-heading: 22px;
+			--font-family: "Outfit";
+			--font-normal: 400;
+			--font-bold: 700;
+			--spacing-200: 16px;
+			--spacing-300: 24px;
+			--spacing-500: 40px;
+		}
+
+		body {
+			font-family: var(--font-family);
+		}
+
+		.container {
+			margin: 0 auto;
+			height: 100vh;
+			background-color: var(--slate-300);
+			display: grid;
+			place-items: center;
+		}
+
+		.qr-wrapper {
+			max-width: 320px;
+			padding: var(--spacing-200);
+			padding-bottom: var(--spacing-300);
+			background-color: var(--bg-color);
+			border-radius: 20px;
+			box-shadow: 0 25px 25px rgba(0, 0, 0, 0.047);
+		}
+
+		.qr-image {
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		.qr-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+			object-fit: cover;
+		}
+
+		.qr-text {
+			padding: var(--spacing-200);
+		}
+
+		.qr-text h1 {
+			font-size: var(--font-size-heading);
+			color: var(--slate-900);
+			text-align: center;
+			margin-bottom: var(--spacing-200);
+			letter-spacing: 0;
+			line-height: 120%;
+		}
+
+		.qr-text p {
+			font-size: var(--font-size-text);
+			color: var(--slate-500);
+			text-align: center;
+			letter-spacing: 0.2px;
+			line-height: 140%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="qr-wrapper">
+			<div class="qr-image">
+				<img src="images/image-qr-code.png" alt="qr-code">
+			</div>
+			<div class="qr-text">
+				<h1>Improve your front-end skills by building projects</h1>
+				<p>Scan the QR code ito visit Frontend Mentor and take your coding skills to the next level</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
