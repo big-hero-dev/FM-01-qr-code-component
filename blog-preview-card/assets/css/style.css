@@ -57,6 +57,10 @@ time {
 	margin-bottom: 1rem;
 }
 
+h1 {
+	display: none;
+}
+
 h2 {
 	font-size: calc((20 / 16) * 1rem);
 	margin-bottom: 1rem;
