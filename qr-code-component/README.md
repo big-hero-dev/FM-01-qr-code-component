@@ -29,7 +29,7 @@ This is my solution for the **QR Code Component** challenge on [Frontend Mentor]
 ```
 
 ## 🌎 Live Preview
-You can view the live solution here: [Live Demo](https://bigherodev.cloud/qr-code-component)
+You can view the live solution here: [Live Demo](https://big-hero-dev.github.io/fm-challenges/qr-code-component)
 
 ## 🎯 What I Learned
 - Structuring a simple component-based layout.
