@@ -11,10 +11,10 @@ You can browse the solutions by visiting the homepage at [big-hero-dev.github.io
 ## 📂 Solution List
 - [QR Code Component](./qr-code-component/)
 ## 🛠 Technologies Used
-- [HTML](w)
-- [CSS](w)
-- [JavaScript](w)
-- [GitHub Pages](w)
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
 
 ## 📬 Contact
 If you have any questions or suggestions, feel free to contact me at [khanhtran28.work@gmail.com](mailto:khanhtran28.work@gmail.com).
