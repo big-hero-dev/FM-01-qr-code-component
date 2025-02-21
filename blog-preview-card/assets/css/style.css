@@ -7,7 +7,7 @@
 
 @font-face {
 	font-family: 'Figtree';
-	src: url('/assets/fonts/Figtree-VariableFont_wght.ttf');
+	src: url('../fonts/Figtree-VariableFont_wght.ttf');
 	font-weight: 500 800;
 	font-display: swap;
 	font-style: normal;
@@ -58,12 +58,12 @@ time {
 	margin-bottom: 1rem;
 }
 
-h2 {
+h1 {
 	font-size: calc((20 / 16) * 1rem);
 	margin-bottom: 1rem;
 }
 
-h2:hover {
+h1:hover {
 	color: var(--primary-color);
 	cursor: pointer;
 }
