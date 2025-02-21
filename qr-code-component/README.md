@@ -31,9 +31,6 @@ This is my solution for the **QR Code Component** challenge on [Frontend Mentor]
 ## 🌎 Live Preview
 You can view the live solution here: [Live Demo](https://bigherodev.cloud/qr-code-component)
 
-## 📸 Screenshot
-![QR Code Component Screenshot](./screenshot.png)
-
 ## 🎯 What I Learned
 - Structuring a simple component-based layout.
 - Using Flexbox for alignment.
