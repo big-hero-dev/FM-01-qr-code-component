@@ -1,169 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Khanh Tran" />
+    <meta name="color-scheme" content="only light" />
+    <title>Frontend Mentor Solutions | Khanh Tran</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.frontendmentor.io/static/images/logo-desktop.svg"
+    />
+    <style>
+      :root {
+        --primary: #6b8e23;
+        --primary-hover: #5a7a1e;
+        --background: #f8fafc;
+        --card-bg: #ffffff;
+      }
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Khanh Tran">
-	<meta name="color-scheme" content="only light">
-	<title>Frontend Mentor Solutions | Khanh Tran</title>
-	<link rel="icon" type="image/png" sizes="32x32" href="https://www.frontendmentor.io/static/images/logo-desktop.svg">
-	<style>
-		:root {
-			--primary: #6b8e23;
-			--primary-hover: #5a7a1e;
-			--background: #f8fafc;
-			--card-bg: #ffffff;
-		}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.5;
+        background-color: var(--background);
+        color: #334155;
+      }
 
-		body {
-			font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-			line-height: 1.5;
-			background-color: var(--background);
-			color: #334155;
-		}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
 
-		.container {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 2rem 1rem;
-		}
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 4rem 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-hover)
+        );
+        color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
 
-		header {
-			text-align: center;
-			margin-bottom: 3rem;
-			padding: 4rem 1rem;
-			background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-			color: white;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-		}
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
 
-		h1 {
-			font-size: 2.5rem;
-			margin-bottom: 0.5rem;
-			font-weight: 700;
-		}
+      .subtitle {
+        font-size: 1.125rem;
+        color: #e2e8f0;
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-		.subtitle {
-			font-size: 1.125rem;
-			color: #e2e8f0;
-			max-width: 600px;
-			margin: 0 auto;
-		}
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
 
-		.projects-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 1.5rem;
-			margin: 2rem 0;
-		}
+      .project-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+      }
 
-		.project-card {
-			background: var(--card-bg);
-			border-radius: 12px;
-			padding: 1.5rem;
-			transition: transform 0.2s ease;
-			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-			border: 1px solid #e2e8f0;
-		}
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
 
-		.project-card:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-		}
+      .project-card a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-		.project-card a {
-			color: var(--primary);
-			text-decoration: none;
-			font-weight: 600;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
+      .project-card a::after {
+        content: "→";
+        margin-left: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
 
-		.project-card a::after {
-			content: "→";
-			margin-left: 0.5rem;
-			opacity: 0;
-			transition: opacity 0.2s ease;
-		}
+      .project-card:hover a::after {
+        opacity: 1;
+      }
 
-		.project-card:hover a::after {
-			opacity: 1;
-		}
+      footer {
+        text-align: center;
+        margin-top: 4rem;
+        padding: 2rem 1rem;
+        border-top: 1px solid #e2e8f0;
+        color: #64748b;
+      }
 
-		footer {
-			text-align: center;
-			margin-top: 4rem;
-			padding: 2rem 1rem;
-			border-top: 1px solid #e2e8f0;
-			color: #64748b;
-		}
+      footer a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
 
-		footer a {
-			color: var(--primary);
-			text-decoration: none;
-			font-weight: 500;
-		}
+      footer a:hover {
+        text-decoration: underline;
+      }
 
-		footer a:hover {
-			text-decoration: underline;
-		}
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
 
-		@media (max-width: 768px) {
-			.container {
-				padding: 1rem;
-			}
+        header {
+          padding: 3rem 1rem;
+        }
 
-			header {
-				padding: 3rem 1rem;
-			}
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
 
-			h1 {
-				font-size: 2rem;
-			}
-		}
-	</style>
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Frontend Mentor Solutions</h1>
+        <p class="subtitle">
+          A collection of modern web development solutions by Khanh Tran
+        </p>
+      </div>
+    </header>
 
-<body>
-	<header>
-		<div class="container">
-			<h1>Frontend Mentor Solutions</h1>
-			<p class="subtitle">A collection of modern web development solutions by Khanh Tran</p>
-		</div>
-	</header>
+    <main class="container">
+      <div class="projects-grid">
+        <article class="project-card">
+          <h2>QR Code Component</h2>
+          <a
+            href="./qr-code-component/"
+            aria-label="View QR Code Component Solution"
+          >
+            View Solution
+          </a>
+        </article>
+        <article class="project-card">
+          <h2>Blog Preview Card</h2>
+          <a
+            href="./blog-preview-card/"
+            aria-label="View QR Blog Preview Card Solution"
+          >
+            View Solution
+          </a>
+        </article>
+        <article class="project-card">
+          <h2>Social Links Profile</h2>
+          <a
+            href="./social-links-profile/"
+            aria-label="View Social Links Profile Solution"
+          >
+            View Solution
+          </a>
+        </article>
+      </div>
+    </main>
 
-	<main class="container">
-		<div class="projects-grid">
-			<article class="project-card">
-				<h2>QR Code Component</h2>
-				<a href="./qr-code-component/" aria-label="View QR Code Component Solution">
-					View Solution
-				</a>
-			</article>
-			<article class="project-card">
-				<h2>Blog Preview Card</h2>
-				<a href="./blog-preview-card/" aria-label="View QR Blog Preview Card Solution">
-					View Solution
-				</a>
-			</article>
-		</div>
-	</main>
-
-	<footer>
-		<div class="container">
-			<p>Powered by <a href="https://github.com/big-hero-dev" target="_blank" rel="noopener">Khanh Tran</a></p>
-			<p>Solutions from <a href="https://www.frontendmentor.io/" target="_blank" rel="noopener">Frontend Mentor</a>
-				challenges</p>
-		</div>
-	</footer>
-</body>
-
+    <footer>
+      <div class="container">
+        <p>
+          Powered by
+          <a
+            href="https://github.com/big-hero-dev"
+            target="_blank"
+            rel="noopener"
+            >Khanh Tran</a
+          >
+        </p>
+        <p>
+          Solutions from
+          <a
+            href="https://www.frontendmentor.io/"
+            target="_blank"
+            rel="noopener"
+            >Frontend Mentor</a
+          >
+          challenges
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
