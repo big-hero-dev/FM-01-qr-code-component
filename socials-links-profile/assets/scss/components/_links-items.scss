@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.social-links {
+  ul {
+    @include flex-center;
+    gap: space("md");
+    flex-direction: column;
+    font-weight: fw("medium");
+
+    li {
+      width: 100%;
+
+      a {
+        background-color: color("gray-700");
+        padding: space("md");
+        display: block;
+        width: 100%;
+        border-radius: space("sm");
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: color("primary");
+          color: color("gray-900")
+        }
+      }
+    }
+  }
+}

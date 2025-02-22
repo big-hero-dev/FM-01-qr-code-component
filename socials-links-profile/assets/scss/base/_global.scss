@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: $font-family;
+  color: color("secondary");
+}
+
+a {
+  text-decoration: none;
+  color: color("secondary");
+}
+
+ul li {
+  list-style: none;
+}
+
+address {
+  color: color("primary");
+  font-style: normal;
+  font-weight: fw("medium");
+  font-size: rem(12px);
+  margin-bottom: space("md")
+}
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+}
