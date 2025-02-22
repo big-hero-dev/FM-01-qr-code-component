@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/big-hero-dev/fm-challenges/tree/main/socials-links-profile)
+- Solution URL: [Solution URL](https://github.com/big-hero-dev/fm-challenges/tree/main/social-links-profile)
 - Live Site URL: [Live Site](https://big-hero-dev.github.io/fm-challenges/social-links-profile/)
 
 ## My process
