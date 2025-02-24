@@ -1,0 +1,22 @@
+@use "../abtracts/variables" as *;
+@use "../abtracts/functions" as *;
+
+body {
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  @include color(background-color, stone-900);
+  @include color(color, stone-600);
+}
+
+.container {
+  min-height: 100vh;
+  width: clamp(to-rem(320), 100%, to-rem(1440));
+  margin: 0 auto;
+  transition: padding 0.3s ease-in-out;
+
+  @include media(sm) {
+    padding: to-rem(150) 0;
+  }
+
+  @include color(background-color, stone-100);
+}

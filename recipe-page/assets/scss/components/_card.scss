@@ -1,0 +1,134 @@
+@use "../abtracts/variables" as *;
+@use "../abtracts/functions" as *;
+
+.card {
+  width: 100%;
+  max-width: to-rem(375);
+  margin: 0 auto;
+  transition: max-width 0.3s ease-in-out;
+
+  @include media(sm) {
+    max-width: to-rem(768);
+  }
+
+  @include space(border-radius, md);
+  @include color(background-color, white);
+
+  img {
+    display: block;
+    width: 100%;
+    @include space(border-radius, sm);
+  }
+
+  h1,
+  h2,
+  h3,
+  hr,
+  ul,
+  p {
+    @include space(margin-bottom, lg)
+  }
+
+  h1, h2 {
+    font-family: Young Serif, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: to-rem(32);
+  }
+
+  h2 {
+    font-size: to-rem(28);
+    @include color(color, brown-800);
+  }
+
+  .hero {
+    @include media(sm) {
+      @include space(padding, lg);
+    }
+  }
+
+  .content {
+    @include space(padding, lg);
+  }
+
+  ol,
+  ul {
+    display: flex;
+    flex-direction: column;
+    @include space(gap, md);
+  }
+
+  ol {
+    list-style-type: number;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  li {
+    @include space(margin-left, md);
+    @include space(padding-left, md);
+
+    &::marker {
+      @include color(color, rose-800);
+      @include space(margin, lg);
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+  }
+
+  .preparation-wrapper {
+    @include color(background-color, rose-50);
+    @include space(padding, lg);
+    @include space(margin-bottom, lg);
+
+    h3 {
+      @include color(color, rose-800);
+      font-weight: 600;
+      font-size: to-rem(20);
+    }
+
+  }
+
+  hr {
+    margin: to-rem(36) auto;
+    @include color(background-color, stone-150)
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+
+      &:not(:last-child) {
+        border-bottom: to-rem(1) solid;
+        @include color(border-color, stone-150);
+      }
+
+
+      td {
+        @include space(padding, md);
+
+        &:nth-child(1) {
+          @include color(color, stone-600);
+        }
+
+        &:nth-child(2) {
+          @include color(color, brown-800);
+          font-weight: 800;
+        }
+
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,40 @@
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px,
+);
+
+$color: (
+  white: hsl(0, 0%, 100%),
+  stone-100: hsl(30, 54%, 90%),
+  stone-150: hsl(30, 18%, 87%),
+  stone-600: hsl(30, 10%, 34%),
+  stone-900: hsl(24, 5%, 18%),
+  brown-800: hsl(14, 45%, 36%),
+  rose-800: hsl(332, 51%, 32%),
+  rose-50:hsl(330, 100%, 98%),
+);
+
+$breakpoints: (
+  xs: 325px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1440px,
+);
+
+@mixin space($type, $size) {
+  #{$type}: map-get($spacing, $size);
+}
+
+@mixin color($type, $value) {
+  #{$type}: map-get($color, $value);
+}
+
+@mixin media($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
