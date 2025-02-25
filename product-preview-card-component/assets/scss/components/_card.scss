@@ -1,0 +1,99 @@
+@use "../abtracts/variables" as *;
+
+.card {
+  @include space(border-radius, sm);
+  @include color(background-color, white);
+  width: 100%;
+  max-width: 375px;
+  overflow: hidden;
+
+  @include media(lg) {
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  picture {
+    display: block;
+    width: 100%;
+  }
+
+  .content {
+    @include space(padding, "2xl");
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 1rem;
+
+    .tag {
+      @include font(p);
+      @include color(color, grey);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: rem(13);
+      line-height: 1.5;
+    }
+
+    h1 {
+      @include font(h, 700);
+      @include color(color, black);
+
+      @include media(lg) {
+        font-size: 3rem;
+      }
+
+      font-size: 2rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  .add-to-cart {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+
+    p {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      .price {
+        @include font(h, 700);
+        @include color(color, green-500);
+        font-size: 2.5rem;
+      }
+
+      .regular {
+        text-decoration-line: line-through;
+      }
+    }
+
+    .cart-btn {
+      @include color(background-color, green-500);
+      @include space(padding, md);
+      @include color(color, white);
+      @include space(border-radius, xs);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        @include color(background-color, green-700);
+      }
+
+      i.cart-icon {
+        margin-right: 0.5rem;
+        background-image: url('../images/icon-cart.svg');
+        display: inline-block;
+        width: 0.9rem;
+        height: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+$breakpoints: (
+  sm: 375px,
+  md: 576px,
+  lg: 768px,
+  xl: 1440px
+);
+
+@mixin media($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+$fonts: (
+  h: Fraunces,
+  p: Montserrat,
+);
+
+@mixin font($name, $weight: 500) {
+  font-family: map-get($map: $fonts, $key: $name), sans-serif;
+  font-weight: $weight;
+}
+
+$colors: (
+  green-500: hsl(158, 36%, 37%),
+  green-700: hsl(158, 42%, 18%),
+  black: hsl(212, 21%, 14%),
+  grey: hsl(228, 12%, 48%),
+  cream: hsl(30, 38%, 92%),
+  white: hsl(0, 0%, 100%)
+);
+
+@mixin color($prop, $color) {
+  #{$prop}: map-get($colors, $color);
+}
+
+$spaces: (
+  "xxs": 4px,
+  "xs": 8px,
+  "sm": 12px,
+  "md": 16px,
+  "lg": 24px,
+  "xl": 32px,
+  "2xl": 40px,
+  "3xl": 48px,
+  "4xl": 64px
+);
+
+@mixin space($prop, $space) {
+  #{$prop}: map-get($spaces, $space);
+}
+
+@function rem($px, $base-font: 16) {
+  @return ($px / $base-font ) * 1rem;
+}
